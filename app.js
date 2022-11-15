@@ -15,7 +15,7 @@ let btn5 = document.getElementById("btn5");
 let btn6 = document.getElementById("btn6");
 
 btn1.addEventListener("click", function(){
-	<button onclick="document.location='page/tetris.html'">tetris</button>;
+	<button onclick="document.location='ivsetyt.github.io/tetris.html'">tetris</button>;
 	}
 	});
 
