@@ -14,7 +14,7 @@ let btn4 = document.getElementById("btn4");
 let btn5 = document.getElementById("btn5");
 let btn6 = document.getElementById("btn6");
 
-btn1.addEventListener("click", function(document.querySelector(".offlink")[0].href = https://){
+btn1.addEventListener("click", function(document.querySelector(".offlink")[0].href = https://ivsetyt.github.io/tetris.html){
 	if (tg.MainButton.isVisible) {
 		tg.MainButton.hide();
 	}
