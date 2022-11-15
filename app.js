@@ -3,7 +3,7 @@ let tg = window.Telegram.WebApp;
 tg.expand();
 
 tg.MainButton.textColor = "#FFFFFF";
-tg.MainButton.color = "#2cab37";
+// tg.MainButton.color = "#2cab37";
 
 let item = "";
 
@@ -15,15 +15,9 @@ let btn5 = document.getElementById("btn5");
 let btn6 = document.getElementById("btn6");
 
 btn1.addEventListener("click", function(){
-	if (tg.MainButton.isVisible) {
-		tg.MainButton.hide();
+	<button onclick="document.location='page/new.html'">tetris</button>;
 	}
-	else {
-		tg.MainButton.setText("Вы выбрали игру 1!");
-		item = "1";
-		tg.MainButton.show();
-	}
-});
+	});
 
 btn2.addEventListener("click", function(){
 	if (tg.MainButton.isVisible) {
