@@ -195,13 +195,13 @@
         <small>(Бот получит сообщение с заполненным <code>web_app_data</code> field)</small>
         
         <button onclick="<a href="/snake.html">внутренная ссылка</a>"></button>
-        <small>(Скрывает/показывает главную кнопку)</small>
+        <small>(змейка)</small>
         
     </div>
 
     <h3>Test links</h3>
     <ul>
-        <li><a href="?nextpage=1">внутренная ссылка</a> (открывается внутри веб-просмотра)</li>
+        <li><a href="/snake.html">внутренная ссылка</a> (открывается внутри веб-просмотра)</li>
         <li><a href="https://telegram.org/" target="_blank">target="_blank" link</a> (открывается за пределами веб-просмотра)</li>
         <li><a href="javascript:window.open('https://telegram.org/');">window.open() link</a> (opens outside
             webview)</li>
@@ -245,7 +245,7 @@
     Telegram.WebApp.MainButton
         .setText('CLOSE WEBVIEW')
         .show()
-        .onClick(function(){ webviewClose(); });
+        .onClick(function(){webviewClose();});
 
     Telegram.WebApp.onEvent('themeChanged', function() {
         document.querySelector('#themeData').innerHTML = JSON.stringify(Telegram.WebApp.themeParams, null, 2);
