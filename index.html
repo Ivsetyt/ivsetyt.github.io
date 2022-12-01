@@ -186,19 +186,23 @@
 
     <div id="buttons">
         <button onclick="webviewExpand();">развернуть веб просмотр</button>
-        <small>(The window goes fullscreen)</small>
+        <small>(Окно становится полноэкранным)</small>
         
-        <button onclick="toggleMainButton(this);">скрыть\показать гл кнопку</button>
-        <small>(It hides/shows main button)</small>
+        <button onclick="toggleMainButton(this);">скрыть\показать</button>
+        <small>(Скрывает/показывает главную кнопку)</small>
         
         <button id="btnTime" onclick="sendTime(10);">отправить время</button>
-        <small>(The bot will recieve a message with filled <code>web_app_data</code> field)</small>
+        <small>(Бот получит сообщение с заполненным <code>web_app_data</code> field)</small>
+        
+        <button onclick="<a href="?nextpage=1">внутренная ссылка</a>">ссылка</button>
+        <small>(Скрывает/показывает главную кнопку)</small>
+        
     </div>
 
     <h3>Test links</h3>
     <ul>
-        <li><a href="?nextpage=1">Regular link #1</a> (opens inside webview)</li>
-        <li><a href="https://telegram.org/" target="_blank">target="_blank" link</a> (opens outside webview)</li>
+        <li><a href="?nextpage=1">внутренная ссылка</a> (открывается внутри веб-просмотра)</li>
+        <li><a href="https://telegram.org/" target="_blank">target="_blank" link</a> (открывается за пределами веб-просмотра)</li>
         <li><a href="javascript:window.open('https://telegram.org/');">window.open() link</a> (opens outside
             webview)</li>
         <li><a href="https://t.me/like">LikeBot t.me link</a> (opens inside Telegram app)</li>
@@ -208,15 +212,15 @@
     <h3>Test permissions</h3>
     <ul>
         <li>
-            <a href="javascript:;" onclick="return requestLocation();">Request Location</a>
+            <a href="javascript:;" onclick="return requestLocation();">доступ к геолокацие</a>
             <span id="locationData"></span>
         </li>
         <li>
-            <a href="javascript:;" onclick="return requestVideo();">Request Video</a>
+            <a href="javascript:;" onclick="return requestVideo();">доступ к видео</a>
             <span id="videoData"></span>
         </li>
         <li>
-            <a href="javascript:;" onclick="return requestAudio();">Request Audio</a>
+            <a href="javascript:;" onclick="return requestAudio();">доступ к аудио</a>
             <span id="audioData"></span>
         </li>
     </ul>
@@ -233,7 +237,7 @@
     const initData = Telegram.WebApp.initData || '';
     const initDataUnsafe = Telegram.WebApp.initDataUnsafe || {};
 
-    document.querySelector('#greeting').innerHTML = `Hi, ${initDataUnsafe.user.first_name}!`;
+    document.querySelector('#greeting').innerHTML = `Привет, ${initDataUnsafe.user.first_name}!`;
     document.querySelector('#initData').innerHTML = JSON.stringify(initData, null, 2);
     document.querySelector('#initDataUnsafe').innerHTML = JSON.stringify(initDataUnsafe, null, 2);
     document.querySelector('#themeData').html(JSON.stringify(Telegram.WebApp.themeParams, null, 2));
